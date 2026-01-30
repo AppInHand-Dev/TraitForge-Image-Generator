@@ -27,8 +27,8 @@ I don't have active plans to develop this further, but **I'm open to contributio
 ### Tech Stack
 
 *   **Language:** C#
-*   **Framework:** .NET (specify your version, e.g., .NET 6)
-*   **Platform:** Windows (WinForms / WPF - specify which one you used)
+*   **Framework:** .NET (.NET 8)
+*   **Platform:** Windows (WPF)
 
 ---
 
