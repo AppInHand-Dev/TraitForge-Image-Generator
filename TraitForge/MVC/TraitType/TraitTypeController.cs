@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Data.Entity.Core.Common.EntitySql;
-using System.Data.SQLite;
-using System.Linq;
-using System.Reflection.PortableExecutable;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SQLite;
 using System.Transactions;
-using System.Windows.Controls.Primitives;
-using System.Xml.Linq;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TraitForge.MVC.TraitType
 {

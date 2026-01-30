@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 
@@ -12,16 +11,17 @@ namespace TraitForge
     public partial class App : Application
     {
 
-        public static Class1 c1 { get; set; }
+        public static DatabaseManager c1 { get; set; }
         public static WindowMain MyMainWindow {  get; set; }
         public static Frame MainFrame { get; set; }
 
         public App()
         {
-            c1 = new Class1();
-            //Class1.CreateDb("db");
-            c1.ConnectToDb("db");
-            //c1.InitDb();
+            const string DB_NAME = "db";
+
+            c1 = new DatabaseManager(DB_NAME);
+            c1.ConnectToDb(DB_NAME);
+            c1.InitDb();
 
             MyMainWindow = new WindowMain();
 

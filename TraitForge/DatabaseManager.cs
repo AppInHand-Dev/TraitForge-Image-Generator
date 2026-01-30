@@ -1,26 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Data.SQLite;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SQLite;
+using System.IO;
 using System.Transactions;
 
 namespace TraitForge
 {
-    public class Class1
+    public class DatabaseManager
     {
 
         public SQLiteConnection DbConnection { get; set; }
 
 
-        public Class1()
-        {}
-
+        public DatabaseManager(string dbName)
+        {
+            if (!File.Exists($"{dbName}.sqlite"))
+            {
+                CreateDb(dbName);
+            }
+        }
 
         public static void CreateDb(string dbName)
         {
@@ -39,8 +35,8 @@ namespace TraitForge
 
             using (TransactionScope transaction = new TransactionScope())
             {
-                string sql = 
-                    "CREATE TABLE collections" +
+                string sql =
+                    "CREATE TABLE IF NOT EXISTS collections" +
                     "(" +
                         "id INTEGER NOT NULL PRIMARY KEY," +
                         "name VARCHAR(20) NOT NULL UNIQUE," +
@@ -51,8 +47,8 @@ namespace TraitForge
                 //command.ExecuteReader();
                 command.ExecuteNonQuery();
 
-                sql = 
-                    "CREATE TABLE trait_types" +
+                sql =
+                    "CREATE TABLE IF NOT EXISTS trait_types" +
                     "(" +
                         "id INTEGER NOT NULL PRIMARY KEY," +
                         "name VARCHAR(20) NOT NULL," +
@@ -69,8 +65,8 @@ namespace TraitForge
                 command.ExecuteNonQuery();
                 //command.CommandText = sql;
 
-                sql = 
-                    "CREATE TABLE traits " +
+                sql =
+                    "CREATE TABLE IF NOT EXISTS traits " +
                     "(" +
                         "id INTEGER NOT NULL PRIMARY KEY," +
                         "name varchar(20) NOT NULL," +
