@@ -4,14 +4,6 @@ TraitForge is a simple Windows (.NET) desktop application written in C# that gen
 
 ---
 
-### 📸 Screenshot
-
-*(Here you should insert a screenshot of the app in action. Even if the GUI is basic, showing it is better than not showing it.)*
-
-![TraitForge Screenshot](URL_DELLO_SCREENSHOT_CARICATO_SU_GITHUB)
-
----
-
 ### The Story & Current Status
 
 This application was originally developed as a custom tool for a client. The core functionality is complete and working, but the project was halted before any significant UI/UX refinement.
