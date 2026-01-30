@@ -1,0 +1,15 @@
+﻿<Window x:Class="TraitForge.Windows.WindowTraitTypeAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TraitForge.Windows"
+        mc:Ignorable="d"
+        Title="WindowTraitTypeAdd" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="LblTraitTypeName" Content="Name" HorizontalAlignment="Left" Height="30" Margin="136,44,0,0" VerticalAlignment="Top" Width="143"/>
+        <TextBox x:Name="TxtboxTraitTypeName" HorizontalAlignment="Left" Height="30" Margin="136,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143"/>
+        <Button x:Name="BtnTraitTypeCreate" Content="Apply" HorizontalAlignment="Left" Height="38" Margin="145,298,0,0" VerticalAlignment="Top" Width="134" Click="BtnTraitTypeCreate_Click"/>
+        <Button x:Name="BtnTraitTypeAddCancel" Content="Cancel" HorizontalAlignment="Left" Height="41" Margin="145,359,0,0" VerticalAlignment="Top" Width="134" Click="BtnTraitTypeAddCancel_Click"/>
+    </Grid>
+</Window>
